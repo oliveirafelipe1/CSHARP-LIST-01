@@ -23,7 +23,7 @@ namespace ConsoleApp10
             {
                 Console.WriteLine($"O peso de ideal de um homem com {altura} de altura é de {pesoIdealHomem}");
             }
-            else if (sexo == 'F' || sexo == 'm')
+            else if (sexo == 'F' || sexo == 'f')
             {
                 Console.WriteLine($"O peso de ideal de uma mulher com {altura} de altura é de {pesoIdealMulher}");
             }
