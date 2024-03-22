@@ -4,25 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp4
+namespace ConsoleApp63
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite um numero real: ");
-            int numeroReal = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual sua idade? ");
+            int idade = int.Parse(Console.ReadLine());
 
-            if (numeroReal >= 0)
-            {
-                double resultado1 = Math.Sqrt(numeroReal);
-                Console.WriteLine("A raiz quadrada do seu número é: " + resultado1);
-            }
-            else
-            {
-                double resultado2 = numeroReal * numeroReal;
-                Console.WriteLine("O seu numero elevado a ele mesmo da: " + resultado2);
-            }
+            Console.WriteLine("Qual o tipo de habilitação que vc tem? ");
+            char habilitacao = char.Parse(Console.ReadLine());
+
+            Console.WriteLine("Quanto tempo você tem possui a carteira de habilitação? (em anos) ");
+            double tempo = int.Parse(Console.ReadLine());
+
+                if (idade < 21)
+                {
+                    Console.Write("Idade mínima nao comprida.");
+                }
+                else if ((tempo < 2) && (habilitacao == 'B' || habilitacao == 'b'))
+                {
+                    Console.WriteLine("Tempo mínimo de habilitação B não comprido.");
+                }
+                else if ((tempo < 1) && (habilitacao == 'C' || habilitacao == 'c'))
+                {
+                    Console.WriteLine("Tempo mínimo de habilitação C não comprido.");
+                }
+                else
+                {
+                    Console.WriteLine("Voce possui os requisitos para carteira D.");
+                }
             Console.ReadLine();
         }
     }
