@@ -16,7 +16,6 @@ namespace ConsoleApp46
             if (numero <= 0) 
             {
                 Console.WriteLine("O seu numero precisa ser maior que zero.");
-                return;
             }
             else
             {
